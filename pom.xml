@@ -78,8 +78,8 @@
 					<imageName>${project.artifactId}</imageName>
 					<mainClass>${exec.mainClass}</mainClass>
 					<buildArgs>
+						<!-- Add "export USE_NATIVE_IMAGE_JAVA_PLATFORM_MODULE_SYSTEM=false" before compiling native image -->
 						<buildArg>--add-exports=org.graalvm.nativeimage.builder/com.oracle.svm.core=ALL-UNNAMED</buildArg>
-						<buildArg>--add-opens=java.base/jdk.internal.misc=ALL-UNNAMED</buildArg>
 						<buildArg>-H:+ReportExceptionStackTraces</buildArg>
 					</buildArgs>					
 				</configuration>
