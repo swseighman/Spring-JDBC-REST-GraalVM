@@ -28,11 +28,11 @@
 		</dependency>
 
 		<dependency>
-            <groupId>com.oracle.database.jdbc</groupId>
+			<groupId>com.oracle.database.jdbc</groupId>
             <artifactId>ojdbc11-production</artifactId>
-            <version>21.5.0.0</version>
-            <type>pom</type>
-        </dependency>
+			<version>21.8.0.0</version>
+			<type>pom</type>
+		</dependency>
 
 		<dependency>
 			<groupId>org.junit.platform</groupId>
@@ -77,9 +77,11 @@
 				<configuration>
 					<imageName>${project.artifactId}</imageName>
 					<mainClass>${exec.mainClass}</mainClass>
+					<jvmArgs>
+						<arg>--add-exports=org.graalvm.nativeimage.builder/com.oracle.svm.core=ALL-UNNAMED</arg>
+					</jvmArgs>
 					<buildArgs>
 						<!-- Add "export USE_NATIVE_IMAGE_JAVA_PLATFORM_MODULE_SYSTEM=false" before compiling native image -->
-						<!-- <buildArg>(remove this, add two dashes)add-exports=org.graalvm.nativeimage.builder/com.oracle.svm.core=ALL-UNNAMED</buildArg> -->
 						<buildArg>-H:+ReportExceptionStackTraces</buildArg>
 					</buildArgs>					
 				</configuration>

@@ -109,12 +109,12 @@
   "methods":[{"name":"<init>","parameterTypes":[] }]
 },
 {
-  "name":"com.bezkoder.spring.jdbc.oracle.SpringBootJdbctemplateOracleApplication",
+  "name":"com.example.spring.jdbc.oracle.SpringBootJdbctemplateOracleApplication",
   "allDeclaredFields":true,
   "queryAllDeclaredMethods":true
 },
 {
-  "name":"com.bezkoder.spring.jdbc.oracle.SpringBootJdbctemplateOracleApplication$$SpringCGLIB$$0",
+  "name":"com.example.spring.jdbc.oracle.SpringBootJdbctemplateOracleApplication$$SpringCGLIB$$0",
   "allDeclaredFields":true,
   "methods":[
     {"name":"CGLIB$SET_STATIC_CALLBACKS","parameterTypes":["org.springframework.cglib.proxy.Callback[]"] }, 
@@ -122,7 +122,7 @@
   ]
 },
 {
-  "name":"com.bezkoder.spring.jdbc.oracle.SpringBootJdbctemplateOracleApplicationTests",
+  "name":"com.example.spring.jdbc.oracle.SpringBootJdbctemplateOracleApplicationTests",
   "allDeclaredFields":true,
   "allDeclaredClasses":true,
   "queryAllDeclaredMethods":true,
@@ -134,12 +134,12 @@
   ]
 },
 {
-  "name":"com.bezkoder.spring.jdbc.oracle.controller.TutorialController",
+  "name":"com.example.spring.jdbc.oracle.controller.TutorialController",
   "allDeclaredFields":true,
   "queryAllDeclaredMethods":true
 },
 {
-  "name":"com.bezkoder.spring.jdbc.oracle.repository.JdbcTutorialRepository",
+  "name":"com.example.spring.jdbc.oracle.repository.JdbcTutorialRepository",
   "allDeclaredFields":true,
   "queryAllDeclaredMethods":true,
   "methods":[
@@ -149,12 +149,12 @@
     {"name":"findById","parameterTypes":["java.lang.Long"] }, 
     {"name":"findByPublished","parameterTypes":["boolean"] }, 
     {"name":"findByTitleContaining","parameterTypes":["java.lang.String"] }, 
-    {"name":"save","parameterTypes":["com.bezkoder.spring.jdbc.oracle.model.Tutorial"] }, 
-    {"name":"update","parameterTypes":["com.bezkoder.spring.jdbc.oracle.model.Tutorial"] }
+    {"name":"save","parameterTypes":["com.example.spring.jdbc.oracle.model.Tutorial"] }, 
+    {"name":"update","parameterTypes":["com.example.spring.jdbc.oracle.model.Tutorial"] }
   ]
 },
 {
-  "name":"com.bezkoder.spring.jdbc.oracle.repository.JdbcTutorialRepository$$SpringCGLIB$$0",
+  "name":"com.example.spring.jdbc.oracle.repository.JdbcTutorialRepository$$SpringCGLIB$$0",
   "fields":[
     {"name":"CGLIB$CALLBACK_FILTER"}, 
     {"name":"CGLIB$FACTORY_DATA"}
@@ -162,7 +162,7 @@
   "methods":[{"name":"CGLIB$SET_THREAD_CALLBACKS","parameterTypes":["org.springframework.cglib.proxy.Callback[]"] }]
 },
 {
-  "name":"com.bezkoder.spring.jdbc.oracle.repository.TutorialRepository",
+  "name":"com.example.spring.jdbc.oracle.repository.TutorialRepository",
   "queryAllDeclaredMethods":true,
   "queryAllPublicMethods":true
 },
