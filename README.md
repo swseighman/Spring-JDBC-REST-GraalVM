@@ -59,7 +59,7 @@ mvn clean package
 Start the application:
 
 ```
-java -jar target/spring-boot-jdbctemplate-oracle-0.0.1-SNAPSHOT.jar
+java -jar target/spring-jdbctemplate-oracle-0.0.1-SNAPSHOT.jar
 ```
 Note the startup time (**1.9 seconds**):
 
@@ -128,7 +128,7 @@ mvn -Pnative native:compile -Dagent=true -DskipTests package
 Start the native image executable:
 
 ```
-target/
+target/spring-jdbctemplate-oracle
 ```
 
 Notice the startup time (**107 ms**): 
@@ -137,11 +137,11 @@ Notice the startup time (**107 ms**):
 2023-01-27T11:05:09.123-05:00  INFO 2920 --- [           main] .SpringBootJdbctemplateOracleApplication : Started SpringBootJdbctemplateOracleApplication in 0.107 seconds (process running for 0.109)
 ```
 <br/>
-Repeat the same tests used for the `jar` version of the application (above).
+Repeat the same tests used for the Java version of the application (above).
 
 Access the REST endpoint to display the contents of a `tutorial`.
 
-Browse to:  `http://http://localhost:8080/api/tutorials/1`
+Browse to:  `http://localhost:8080/api/tutorials/1`
  
 #### Summary
 

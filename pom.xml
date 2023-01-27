@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
-	<artifactId>spring-boot-jdbctemplate-oracle</artifactId>
+	<artifactId>spring-jdbctemplate-oracle</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>spring-boot-jdbctemplate-oracle</name>
+	<name>spring-jdbctemplate-oracle</name>
 	<description>Spring Boot JDBC REST example with Oracle</description>
 	<properties>
 		<java.version>17</java.version>
