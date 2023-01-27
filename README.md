@@ -66,7 +66,7 @@ Note the startup time (**1.9 seconds**):
 ```
 2023-01-27T11:07:11.978-05:00  INFO 3151 --- [           main] .SpringBootJdbctemplateOracleApplication : Started SpringBootJdbctemplateOracleApplication in 1.927 seconds (process running for 2.255)
 ```
-<br/>
+
 Add some data to the `tutorials` table using HTTPie, Postman or your favorite API tool.
 
 * Choose `POST`
@@ -79,7 +79,7 @@ Add some data to the `tutorials` table using HTTPie, Postman or your favorite AP
 
 Add a few more entries in the table.
 
-Using SQL Developer, check the contents of the `tutorial` table:
+Using SQL Developer, check the contents of the `tutorials` table:
 
 ![](images/sqldev-3.png)
 
@@ -136,8 +136,8 @@ Notice the startup time (**107 ms**):
 ```
 2023-01-27T11:05:09.123-05:00  INFO 2920 --- [           main] .SpringBootJdbctemplateOracleApplication : Started SpringBootJdbctemplateOracleApplication in 0.107 seconds (process running for 0.109)
 ```
-<br/>
-Repeat the same tests used for the Java version of the application (above).
+
+Repeat the same tests used for the `jar` version of the application (above).
 
 Access the REST endpoint to display the contents of a `tutorial`.
 
