@@ -39,7 +39,7 @@
  * SOFTWARE.
  */
  
- package com.example.spring.jdbc.oracle;
+package com.example.spring.jdbc.oracle;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
