@@ -46,9 +46,9 @@ import java.util.List;
 import com.example.spring.jdbc.oracle.model.Tutorial;
 
 public interface TutorialRepository {
-    int save(Tutorial book);
+    void save(Tutorial book);
 
-    int update(Tutorial book);
+    void update(Tutorial book);
 
     Tutorial findById(Long id);
 

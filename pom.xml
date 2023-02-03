@@ -25,6 +25,12 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>org.yaml</groupId>
+					<artifactId>snakeyaml</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 
 		<dependency>
@@ -76,7 +82,7 @@
 				<artifactId>native-maven-plugin</artifactId>
 				<configuration>
 					<imageName>${project.artifactId}</imageName>
-					<mainClass>${exec.mainClass}</mainClass>
+<!--					<mainClass>${exec.mainClass}</mainClass>-->
 					<buildArgs>
 						<buildArg>--add-exports=org.graalvm.nativeimage.builder/com.oracle.svm.core.configure=ALL-UNNAMED</buildArg>
 						<buildArg>-H:+ReportExceptionStackTraces</buildArg>

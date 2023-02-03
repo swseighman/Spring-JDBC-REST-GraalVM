@@ -58,15 +58,14 @@ public class JdbcTutorialRepository implements TutorialRepository {
     private JdbcTemplate jdbcTemplate;
 
     @Override
-    public int save(Tutorial tutorial) {
-        return jdbcTemplate.update("INSERT INTO tutorials (title, description, published) VALUES(?,?,?)",
-                new Object[] { tutorial.getTitle(), tutorial.getDescription(), tutorial.isPublished() });
+    public void save(Tutorial tutorial) {
+        jdbcTemplate.update("INSERT INTO tutorials (title, description, published) VALUES(?,?,?)",
+                tutorial.getTitle(), tutorial.getDescription(), tutorial.isPublished());
     }
 
     @Override
-    public int update(Tutorial tutorial) {
-        return jdbcTemplate.update("UPDATE tutorials SET title=?, description=?, published=? WHERE id=?", new Object[] {
-                tutorial.getTitle(), tutorial.getDescription(), tutorial.isPublished(), tutorial.getId() });
+    public void update(Tutorial tutorial) {
+        jdbcTemplate.update("UPDATE tutorials SET title=?, description=?, published=? WHERE id=?", tutorial.getTitle(), tutorial.getDescription(), tutorial.isPublished(), tutorial.getId());
     }
 
     @Override

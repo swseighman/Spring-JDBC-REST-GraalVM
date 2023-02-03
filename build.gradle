@@ -1,0 +1,49 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.0.1'
+    id 'io.spring.dependency-management' version '1.1.0'
+    id 'org.graalvm.buildtools.native' version '0.9.18'
+}
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-data-jdbc:3.0.1'
+    implementation 'org.springframework.boot:spring-boot-starter-web:3.0.1'
+    implementation 'com.oracle.database.jdbc:ojdbc11-production:21.8.0.0'
+    testImplementation 'org.junit.platform:junit-platform-launcher:1.8.2'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.8.1'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test:3.0.1'
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+description = 'spring-jdbctemplate-oracle'
+sourceCompatibility = '17'
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
+
+// Configuration used by GraalVM native image compiler while building native image.
+graalvmNative {
+    metadataRepository {
+        enabled = true
+    }
+    binaries {
+        main {
+            // Main options
+            debug = true // Determines if debug info should be generated, defaults to false
+            verbose = true // Add verbose output, defaults to false
+            fallback = false // Sets the fallback mode of native-image, defaults to false
+            buildArgs.add('--add-exports=org.graalvm.nativeimage.builder/com.oracle.svm.core.configure=ALL-UNNAMED')
+            buildArgs.add('--gc=G1')
+            buildArgs.add('--enable-monitoring=jfr')
+            buildArgs.add('-H:+ReportExceptionStackTraces')
+            buildArgs.add('-Ob')
+        }
+    }
+}
